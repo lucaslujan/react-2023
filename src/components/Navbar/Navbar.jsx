@@ -23,9 +23,7 @@ const NavBar = ({children}) => {
                    </Nav>
                     <Nav>
                         <Link to='/cart'>
-                            <Nav.Link href="#deets">
                                 3 <CartWidget/>
-                            </Nav.Link>
                         </Link>
                         {/* <Nav.Link eventKey={2} href="#memes">
                         Dank memes
