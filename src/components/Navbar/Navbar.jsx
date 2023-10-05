@@ -1,41 +1,33 @@
-/* eslint-disable react/prop-types */
-// import { Button } from "react-bootstrap"
 
+import { Link, NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from '../CartWidget/CartWidget';
-import { Link, NavLink } from 'react-router-dom';
-// import Titulo from '../Titulo/Titulo';
-// import {Form, Nav, NavDropdown, Navbar } from "react-bootstrap"
+
+
 
 const NavBar = ({children}) => {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+            <Navbar collapseOnSelect expand="lg" className="navbar bg-info">
                 <Container>
-                    <Link to='/'> Tienda Ecommerce</Link>
+                    <Link className='link' to='/'>Tienda deportiva</Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
-                        <NavLink className= {({isActive })=>isActive ? 'btn btn-primary' : 'btn btn-outline-primary' } to='/category/gorras'>Gorras </NavLink>
-                        <NavLink className= {({isActive })=>isActive ? 'btn btn-primary' : 'btn btn-outline-primary' } to='/category/remeras'>Remeras </NavLink>
-                   </Nav>
-                    <Nav>
-                        <Link to='/cart'>
-                                3 <CartWidget/>
-                        </Link>
-                        {/* <Nav.Link eventKey={2} href="#memes">
-                        Dank memes
-                        </Nav.Link> */}
-                    </Nav> 
-                   
+                        <Nav className="me-auto">
+                            <NavLink className= {({isActive })=>isActive ? 'btn btn-primary' : 'btn btn-light' } to='/category/gorras'>Gorras </NavLink>
+                            <NavLink className= {({isActive })=>isActive ? 'btn btn-primary' : 'btn btn-light' } to='/category/remeras'>Remeras </NavLink>
+                    </Nav>
+                        <Nav>
+                            <Link to='/cart'>
+                                  <CartWidget/>
+                            </Link>
+                        </Nav> 
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            {/* { titulo( {titleObject} ) } */}
-            {/* <Titulo titulo={titleObject} /> */}
-            {children}
+         {children}
         </>
 )}
 

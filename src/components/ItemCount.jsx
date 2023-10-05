@@ -33,13 +33,14 @@ const ItemCount = ({initial, stock, onAdd}) => {
     
     return (
         <center>
-            <div>
-                <button onClick={handleAdd}> + 1 </button>    
+            <div className="container bg-secondary">
+                  
                 <label>
-                    <strong>{ count }</strong>
+                    <div className="btn btn-dark">Productos acumulados:{ count }</div>
                 </label>
-                <button onClick={handleSubtract}> - 1 </button>
-                <button onClick={()=>{handleOnAdd}}> Agregar al carrito </button>
+                <button className="btn btn-warning" onClick={handleSubtract}> - 1 </button>
+                <button className="btn btn-success" onClick={handleAdd}> + 1 </button> 
+                <button onClick={handleOnAdd}> Agregar al carrito </button>
             </div>
         </center>
     )
